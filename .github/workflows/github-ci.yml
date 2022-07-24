@@ -26,9 +26,10 @@ jobs:
       run: mvn clean test -f ./product_review/pom.xml
     - name: Test Product API
       run: mvn clean test -f ./product_service/pom.xml
-      
+
   build:
 
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -39,5 +40,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Build Product Review Service
+      run: mvn clean package -f ./product_review/pom.xml
+    - name: Build Product API
+      run: mvn clean package -f ./product_service/pom.xml
