@@ -66,10 +66,10 @@ jobs:
         with:
           context: ./product_review
           push: true
-          tags: ktaf/product_review:latest
+          tags: kouroshtaf/product_review:latest
       - name: Build and push Product API
         uses: docker/build-push-action@v3
         with:
           context: ./product_service
           push: true
-          tags: ktaf/product_service:latest
+          tags: kouroshtaf/product_service:latest
