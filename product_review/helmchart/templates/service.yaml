@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "product-review.fullname" . }}
+  name: product-review
   labels:
     {{- include "product-review.labels" . | nindent 4 }}
 spec:
