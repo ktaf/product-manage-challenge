@@ -1,4 +1,5 @@
 FROM adoptopenjdk/maven-openjdk11 AS builder-image
+LABEL maintainer="Adidas SRE Team"
 COPY src /tmp/app/src
 COPY pom.xml /tmp/app
 RUN mvn -f /tmp/app/pom.xml clean package
