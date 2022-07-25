@@ -9,6 +9,3 @@ COPY --from=builder-image /tmp/app/target/productservice-*.jar /opt/app.jar
 
 EXPOSE 8080
 CMD java -jar $JAVA_OPTS /opt/app.jar
-
-TAG kouroshtaf/product_service:latest
-TAG kouroshtaf/product_service:0.0.1

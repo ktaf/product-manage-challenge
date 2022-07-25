@@ -9,6 +9,3 @@ COPY --from=builder-image /tmp/app/target/productreview-*.jar /opt/app.jar
 
 EXPOSE 8081
 CMD java -jar $JAVA_OPTS /opt/app.jar
-
-TAG kouroshtaf/product_review:latest
-TAG kouroshtaf/product_review:0.0.1
