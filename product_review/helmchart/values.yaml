@@ -6,7 +6,7 @@ image:
   repository: kouroshtaf/product_review
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "0.0.1"
 
 imagePullSecrets: []
 nameOverride: ""
