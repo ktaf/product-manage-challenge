@@ -1,4 +1,5 @@
 FROM adoptopenjdk/maven-openjdk11 AS builder-image
+LABEL maintainer="Adidas SRE Team"
 COPY src /tmp/app/src
 COPY pom.xml /tmp/app
 RUN mvn -f /tmp/app/pom.xml clean package
@@ -8,3 +9,6 @@ COPY --from=builder-image /tmp/app/target/productservice-*.jar /opt/app.jar
 
 EXPOSE 8080
 CMD java -jar $JAVA_OPTS /opt/app.jar
+
+TAG kouroshtaf/product_service:latest
+TAG kouroshtaf/product_service:0.0.1

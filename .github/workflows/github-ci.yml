@@ -73,10 +73,10 @@ jobs:
         with:
           context: ./product_review
           push: true
-          tags: kouroshtaf/product_review:${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
       - name: Build and push Product API
         uses: docker/build-push-action@v3
         with:
           context: ./product_service
           push: true
-          tags: kouroshtaf/product_service:${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
