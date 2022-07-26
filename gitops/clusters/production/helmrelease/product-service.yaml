@@ -1,0 +1,22 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: product-service
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: ./product-service
+      reconcileStrategy: Revision
+      version: 1.0.0
+      sourceRef:
+        kind: GitRepository
+        name: helmcharts-repo
+        namespace: flux-system
+      valuesFiles:
+        - ./product-service/values.yaml
+  targetNamespace: production
+  releaseName: product-service
+  interval: 24h
+  timeout: 5m
