@@ -8,6 +8,6 @@ spec:
   interval: 5m
   ref:
     branch: dev
-  url: ssh://git@github.com:ktaf/product-manage-challenge/helm-charts
+  url: ssh://git@github.com:ktaf/product-manage-challenge/helmcharts
   secretRef:
     name: product-manage-challenge-repo
