@@ -12,7 +12,7 @@ spec:
       version: 1.0.0
       sourceRef:
         kind: GitRepository
-        name: helmcharts-repo
+        name: helmcharts-repo-staging
         namespace: flux-system
       valuesFiles:
         - ./helmcharts/product-service/values.yaml
