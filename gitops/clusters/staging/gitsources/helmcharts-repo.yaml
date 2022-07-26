@@ -2,12 +2,12 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: helmcharts-repo
+  name: helmcharts-repo-staging
   namespace: flux-system
 spec:
   interval: 5m
   ref:
     branch: dev
-  url: ssh://git@github.com:ktaf/product-manage-challenge/helmcharts
+  url: ssh://git@github.com/ktaf/product-manage-challenge
   secretRef:
     name: product-manage-challenge-repo
